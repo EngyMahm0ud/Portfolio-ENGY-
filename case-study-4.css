@@ -16,8 +16,13 @@ body {
   background: rgb(5, 5, 5);
   font-family: "Inter", sans-serif;
   color: white;
-  overflow-x: hidden;
 }
+
+.content-section,
+.overview-container {
+  overflow: visible;
+}
+
 .logo {
   font-size: 18px;
 }
@@ -166,7 +171,7 @@ body {
 
 .project-image {
   width: 100%;
-  max-width: 750px;
+  max-width: 720px;
   border-radius: 4px;
   margin: 0;
   align-self: flex-start;
@@ -196,7 +201,7 @@ body {
 
 .overview-container {
   flex: 0.78;
-  margin: 0 auto;
+  margin: 15px auto;
 }
 
 .overview-container p {
@@ -213,33 +218,122 @@ body {
   font-size: 20px;
   font-weight: 500;
   color: #aaa;
-  text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
+.section-title-request {
+  font-size: 20px;
+  font-weight: 500;
+  color: #aaa;
+  margin-bottom: 8px;
+  margin-top: 24px;
+}
+
+.section-title-questions{
+  max-width: 600px;
+  margin: 15px 180px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #aaa;
+
+}
+ 
+.pin-img{
+    max-width: 30px;
+
+}
 /* Updated problem-img styling for the scrolling effect */
 .problem-img {
-  margin: 30px auto;
+  width: 60%;
+  max-width: 1000px;
+  margin: 20px auto;
   display: block;
   transition: width 0.5s ease-out;
 }
 
-/* First image should be full width when in view */
-.problem-img {
-  width: 60%;
-  padding: 1rem;
-}
-
-.problem-img img {
-  width: 100%;
-}
 .mobile-problem {
   display: none;
 }
 
 .content-section {
   width: 100%;
+  padding: 1rem;
 }
+.strategy-questions {
+  background-color: #000;
+  padding: 60px 20px;
+}
+
+
+
+
+.rocket-icon {
+  font-size: 28px;
+  transform: rotate(45deg);
+}
+
+.strategy-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.strategy-card {
+  font-size: 12px;
+  line-break: loose;
+  background-color: #252525;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 350px;
+  min-height: 250px;
+}
+
+.strategy-card h3 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0 0 25px 0;
+  text-align: left;
+}
+
+.strategy-card ol {
+  margin: 0;
+  padding-left: 20px;
+  list-style: decimal;
+}
+
+.strategy-card li {
+  color: #c1c1c1;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  padding-left: 5px;
+}
+
+.strategy-card li::marker {
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .strategy-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .strategy-card {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+}
+
+
+
 
 .page-nav {
   display: flex;
@@ -380,32 +474,6 @@ a {
   100% {
     transform: translateX(calc(-420px * 3));
   } /* Image width + margin */
-}
-
-.container-3 {
-  text-align: left;
-  margin-left: 220px;
-  margin-top: 80px;
-}
-.title-2 {
-  font-size: 14px;
-  color: #aaa;
-  margin-bottom: 15px;
-  margin-left: 10px;
-}
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 0.3fr);
-  gap: 15px;
-}
-.card {
-  background: #222;
-  color: #c5c5c5;
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 300px;
-  text-align: center;
-  font-size: 14px;
 }
 
 /* Typography Section */
@@ -567,16 +635,16 @@ a {
 }
 
 .color-1 {
-  background-color: #4182f9;
+  background-color: #8c4be7;
 }
 .color-2 {
-  background-color: #e2656a;
+  background-color: #492183;
 }
 .color-3 {
-  background-color: #ff1111;
+  background-color: #03011e;
 }
 .color-4 {
-  background-color: #e8ecff;
+  background-color: #3e2ffe;
 }
 .color-text {
   background-color: #ffffff;
@@ -648,7 +716,7 @@ a {
 
 /* Main Sections */
 .section {
-  margin: 10px auto;
+  margin: 15px auto;
   width: 100%;
   max-width: 1200px;
   padding: 0 20px;
@@ -715,7 +783,7 @@ a {
 .content-item {
   width: 100%;
   height: 1000px;
-  background: url("assets/Desktop\ -\ 31.png") no-repeat center top;
+  background: url("assets/Desktop\ -\ 32.png") no-repeat center top;
   background-position: center top;
   background-size: 100% auto; /* Change to contain or cover instead of 100% 100% */
   background-repeat: no-repeat;
@@ -813,7 +881,6 @@ a {
   font-size: 32px;
   color: #ffffff;
   margin-top: 50px;
-  margin-left: 25px;
 }
 
 /* Case Study Cards */
@@ -873,8 +940,7 @@ a {
 .case-study-image img {
   max-width: 100%;
   height: auto;
-  overflow: hidden;
-  overflow-clip-margin: 0;
+  overflow-x: hidden;
 }
 
 .case-study-image::before {
@@ -996,22 +1062,30 @@ a {
     padding: 0 30px;
   }
 
+  .case-study-hero {
+    padding: 80px 0px;
+  }
+
   .project-text-container {
-    padding: 1rem;
+    padding: 0.4rem;
   }
 
   .project-image {
     width: 55%;
   }
 
-  .problem-img {
-    width: 60%;
+  .detail-content {
+    font-size: 12px;
+  }
+
+  /* .problem-img {
+    width: 80%;
   }
 
   .problem-img img {
     width: 100%;
     padding: 1rem;
-  }
+  } */
 
   .typography-section,
   .color-section {
@@ -1147,13 +1221,25 @@ a {
     transition: 0.4s;
   }
 
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
   .mobile-nav {
     flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #000;
+    background-color: #262626;
     padding: 20px;
     z-index: 1000;
   }
@@ -1161,20 +1247,24 @@ a {
   .mobile-nav a {
     color: white;
     padding: 10px 0;
+    border-bottom: 1px solid #333;
   }
 
   .mobile-nav a:last-child {
     border-bottom: none;
   }
+  .hero-section {
+    padding: 3rem 2rem;
+  }
 
   .case-study-hero {
     flex-direction: column-reverse;
-    padding: 10px 15px;
+    padding: 50px 15px;
+    gap: 30px;
   }
 
   .project-subtitle {
     font-size: 22px;
-    padding-top: 1rem;
   }
 
   .project-title {
@@ -1194,7 +1284,6 @@ a {
   .project-image {
     width: 100%;
     margin-right: 0;
-    margin-top: 30px;
   }
 
   .project-details {
@@ -1235,18 +1324,6 @@ a {
     padding: 0.5rem;
   }
 
-  .container-3 {
-    margin: auto;
-  }
-
-  .card {
-    max-width: 100%;
-  }
-
-  .grid-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .colors-container {
     flex-wrap: wrap;
   }
@@ -1273,6 +1350,10 @@ a {
 
   .image-item {
     height: 300px;
+  }
+
+  .section-title-2 {
+    margin-left: 0;
   }
 }
 
@@ -1324,14 +1405,26 @@ a {
   .mobile-nav a:last-child {
     border-bottom: none;
   }
+  .hero-section {
+    padding: 3rem 2rem;
+  }
+
+  .problem-img {
+    width: 100%;
+    display: none;
+  }
+
+  .mobile-problem {
+    display: block;
+  }
 
   .case-study-hero {
     flex-direction: column-reverse;
-    padding: 10px 10px;
+    padding: 40px 10px;
+    gap: 30px;
   }
 
   .project-subtitle {
-    padding-top: 1rem;
     font-size: 18px;
   }
 
@@ -1370,47 +1463,18 @@ a {
     padding: 0 10px;
   }
 
-  .problem-img {
-    width: 100%;
-    display: none;
-  }
-
-  .mobile-problem {
-    display: block;
-  }
-
-  .container-3 {
-    margin: auto;
-  }
-
-  .grid-2 {
-    grid-template-columns: repeat(2, 0.5fr);
-    padding: 0.5rem;
-  }
-
-  .card {
-    padding: 15px 15px;
-    font-size: 10px;
-  }
-
   .color-card {
     height: 100px;
-    margin-bottom: 10px;
-  }
-
-  .color-hex {
-    font-size: 6px;
-    left: 2px;
   }
 
   .overview-container {
     margin-left: 0;
-    flex: 1;
     font-size: 15px;
+    flex: 1;
   }
 
   .overview-container p {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .section {
@@ -1425,7 +1489,8 @@ a {
   }
 
   .why-section {
-    padding-right: 20px;
+    width: 100%;
+    padding-right: 10px;
   }
 
   .section-typo3 {
@@ -1440,7 +1505,13 @@ a {
     gap: 0;
   }
 
+  .color-hex {
+    font-size: 5px;
+    left: 2px;
+  }
+
   .color-card {
+    margin-bottom: 10px;
     flex: 0.14;
   }
 

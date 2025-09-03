@@ -63,7 +63,24 @@ document.addEventListener("DOMContentLoaded", () => {
     if (uiDesignSection) uiDesignSection.style.display = "none";
 
     updatePortfolio(`
-            <a href="case-study-1.html" style="text-decoration: none; color: inherit;">
+            
+      <a href="case-study-4.html" style="text-decoration: none; color: inherit;">
+                <div class="case-study-card">
+                    <div class="case-study-image-container">
+                        <div class="read-time">5 mins read</div>
+                        <div class="case-study-image">
+                            <img src="assets/UX Case Study - Sylndr1.png" alt="Case Study Preview" style="transition: opacity 0.3s ease;">
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <h3 class="case-study-title">End-to-End Redesign of Isekai Code's Landing Page</h3>
+                        <p class="case-study-description">The redesign significantly boosted business performance, profitability, and engagement.</p>
+                        <span class="case-study-tag">UX/UI Case Study</span>
+                    </div>
+                </div>
+            </a>
+      
+      <a href="case-study-1.html" style="text-decoration: none; color: inherit;">
                 <div class="case-study-card">
                     <div class="case-study-image-container">
                         <div class="read-time">5 mins read</div>
